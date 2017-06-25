@@ -14,7 +14,7 @@ node {
 
   stage('Build') {
     sh("cd data-app; mvn compile; cd ..")
-    sh("cd web-app; mvn compile; cd ..")
+    sh("cd web-app; mvn clean; mvn compile; cd ..")
   }
 
   stage('Test') {
